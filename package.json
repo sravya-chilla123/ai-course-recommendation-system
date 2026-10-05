@@ -1,0 +1,33 @@
+{
+  "name": "pathpilot-ai-course-recommendation",
+  "version": "1.0.0",
+  "description": "AI-Based Personalized Course Recommendation System & Learning Path MVP as per SRS v1.0",
+  "scripts": {
+    "install-all": "npm install && npm --prefix server install && npm --prefix client install",
+    "server": "npm --prefix server start",
+    "server:dev": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently \"npm run server:dev\" \"npm run client\"",
+    "build": "npm --prefix client run build",
+    "seed": "node server/config/seedData.js",
+    "check-db": "node server/check-db.js"
+  },
+  "keywords": [
+    "mern",
+    "ai-recommendations",
+    "course-recommendation",
+    "learning-path",
+    "react",
+    "express",
+    "mongodb"
+  ],
+  "author": "MERN Stack Architect",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "mongodb": "^7.7.0",
+    "mongoose": "^9.10.3"
+  }
+}
